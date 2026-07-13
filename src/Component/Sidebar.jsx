@@ -9,7 +9,7 @@ import MyPro from '../pages/image3.jpeg';
 
 const Sidebar = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window == 'undefined') {
       return document.documentElement.classList.contains('dark');
     }
     return true; 
