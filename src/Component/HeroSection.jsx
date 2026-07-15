@@ -16,7 +16,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative w-full min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 pt-20 pb-16 overflow-hidden">
+    <section id='home' className="relative w-full min-h-[90vh] flex flex-col lg:flex-row items-center justify-between px-8 lg:px-16 pt-20 pb-16 overflow-hidden">
       <div className="absolute top-6 left-8 flex items-center gap-2 bg-emerald-500/10 dark:bg-[#0a1912] border border-emerald-500/30 px-3 py-1 rounded-full text-emerald-600 dark:text-emerald-400 text-xs font-medium">
         <span className="w-2 h-2 bg-emerald-500 dark:bg-emerald-400 rounded-full animate-pulse"></span>
         Available for Hire
