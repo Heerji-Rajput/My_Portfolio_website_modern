@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Code2, Server, Layout, Wrench,} from 'lucide-react';
+import { Code2, Server, Layout, Wrench } from 'lucide-react';
 
 const Skills = () => {
-  // Skill categories with specific percentage levels
+  // Skill categories with fixed, non-duplicate icon URLs
   const skillCategories = [
     {
       title: "Frontend Development",
@@ -12,7 +12,7 @@ const Skills = () => {
         { name: "JavaScript", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
         { name: "Tailwind CSS", percentage: 95, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
         { name: "HTML5 / CSS3", percentage: 95, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
-        { name: "Boostrap", percentage: 90, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" }
+        { name: "Bootstrap", percentage: 90, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" }
       ]
     },
     {
@@ -22,7 +22,7 @@ const Skills = () => {
         { name: "Node.js", percentage: 80, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
         { name: "Express.js", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg", invert: true },
         { name: "MongoDB", percentage: 75, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
-        { name: "MySQL", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+        { name: "MySQL", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
       ]
     },
     {
@@ -30,17 +30,17 @@ const Skills = () => {
       icon: <Wrench className="text-yellow-400" size={20} />,
       skills: [
         { name: "Git & GitHub", percentage: 88, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
-        { name: "DSA", percentage: 90, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vite/vite-original.svg" },
-        { name: "Design and Analysis Algorithm", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
-        { name: "Information Security", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
-        { name: "Java", percentage: 75, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
-        { name: "Python", percentage: 80, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" },
+        { name: "DSA", percentage: 90, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+        { name: "Design and Analysis Algorithm", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" },
+        { name: "Information Security", percentage: 85, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" },
+        { name: "Java", percentage: 75, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" },
+        { name: "Python", percentage: 80, src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
       ]
     }
   ];
 
   return (
-    <section id="skills" className="w-full  text-white px-8 lg:px-16 py-20 border-t border-gray-900/60 block relative z-30">
+    <section id="skills" className="w-full text-white px-8 lg:px-16 py-20 border-t border-gray-900/60 block relative z-30">
       <div className="max-w-6xl mx-auto">
         
         {/* Section Heading */}
@@ -88,7 +88,6 @@ const SkillBar = ({ skill }) => {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    // Delays slightly to allow mounting before triggering the slide animation
     const timer = setTimeout(() => {
       setWidth(skill.percentage);
     }, 150);
